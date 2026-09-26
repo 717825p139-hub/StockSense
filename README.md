@@ -1,67 +1,61 @@
-# StockSense
+# StockSense 📦
 
-A modular Inventory Management System (IMS) that digitizes stock-related
-operations — replacing manual registers, Excel sheets, and scattered
-tracking methods with a centralized, real-time, easy-to-use app.
+## Smart Inventory Management System
 
-## Problem
+StockSense is a centralized Inventory Management System designed to simplify and digitize warehouse and stock operations.
 
-Businesses often manage inventory through manual registers or scattered
-spreadsheets, leading to errors, lost stock visibility, and slow operations.
-StockSense centralizes all stock movement into one system with a full
-audit trail.
+It replaces manual registers, spreadsheets, and scattered stock tracking with a structured platform for managing **products, warehouses, locations, receipts, deliveries, internal transfers, inventory adjustments, and stock movement history**.
 
-## Target Users
+The system is designed for **Inventory Managers and Warehouse Staff**, providing real-time visibility into inventory operations through a simple and professional interface.
 
-- **Inventory Managers** – manage incoming & outgoing stock
-- **Warehouse Staff** – perform transfers, picking, shelving, and counting
+---
 
-## Core Modules
+## 🏆 Hackathon
 
-- **Authentication** – signup/login, OTP-based password reset
-- **Dashboard** – KPIs (total stock, low/out-of-stock, pending receipts &
-  deliveries, scheduled transfers) with filters by document type, status,
-  warehouse, and category
-- **Product Management** – create/update products, SKU, category, unit of
-  measure, stock per location
-- **Receipts** – record incoming stock from vendors (validate → stock +qty)
-- **Delivery Orders** – pick, pack, and ship outgoing stock (validate →
-  stock −qty)
-- **Internal Transfers** – move stock between locations/warehouses
-  (total stock unchanged, location updated)
-- **Stock Adjustments** – reconcile system stock with physical counts
-- **Move History** – full ledger of every stock movement
-- **Settings** – warehouse configuration
+**Odoo × GCET Hyderabad Hackathon 2026**
 
-## Additional Features
+### Team
 
-- Low stock alerts
-- Multi-warehouse support
-- SKU search & smart filters
+**CodeForIndia**
 
-## Tech Stack
+### Team Members
 
-- **Frontend:** TBD
-- **Backend:** TBD
-- **Database:** TBD
+- Cibi K
+- Pranav R K
+- Sriram G S
 
-## Project Structure
+---
 
-```
-StockSense/
-├── backend/    → API and business logic
-├── frontend/   → Client application
-└── docs/       → Requirements, mockups, planning docs
-```
+# 🎯 Problem
 
-## Status
+Traditional inventory management often depends on:
 
-🚧 In development — project structure and planning phase.
+- Manual registers
+- Excel spreadsheets
+- Separate warehouse records
+- Manual stock calculations
+- Difficult tracking of stock movements
+- Delayed identification of low-stock items
 
-## Getting Started
+These approaches can lead to inaccurate stock information, difficulty tracing inventory movements, and inefficient warehouse operations.
 
-Setup instructions will be added once the tech stack is finalized.
+---
 
-## License
+# 💡 Solution
 
-MIT
+StockSense provides a centralized system where inventory operations can be managed from a single platform.
+
+The system connects:
+
+```text
+Products
+    ↓
+Warehouses
+    ↓
+Locations
+    ↓
+Inventory Operations
+    ↓
+Stock
+    ↓
+Movement History
