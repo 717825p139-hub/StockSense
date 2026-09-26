@@ -19,6 +19,15 @@
 🔗 **Live App:** [stocksense-odoo.vercel.app](https://stocksense-odoo.vercel.app)
 🏆 **Built for:** Odoo × GCET Hyderabad Hackathon 2026
 
+### 🔗 Quick Links
+
+| Resource | Link |
+|---|---|
+| 🚀 Live App | [stocksense-odoo.vercel.app](https://stocksense-odoo.vercel.app) |
+| 🎥 Demo Video | [Watch on Google Drive](https://drive.google.com/file/d/1jGX8N_i0jJk2tLv6YZha2oKQ9GcSxkwp/view?usp=drive_link) |
+| 📂 Repository | [GitHub](https://github.com/717825p139-hub/StockSense) |
+| 🖼️ Screenshots | [Jump to section](#screenshots) |
+
 ---
 
 ## Table of Contents
@@ -74,6 +83,9 @@ Products → Warehouses → Locations → Inventory Operations → Stock → Mov
 ---
 
 ## Screenshots
+
+### 🎥 Demo Video
+📽️ **[Watch the full demo video here](https://drive.google.com/file/d/1jGX8N_i0jJk2tLv6YZha2oKQ9GcSxkwp/view?usp=drive_link)**
 
 ### Dashboard
 ![Dashboard](docs/screenshots/dashboard.png)
