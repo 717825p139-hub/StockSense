@@ -76,19 +76,19 @@ Products → Warehouses → Locations → Inventory Operations → Stock → Mov
 ## Screenshots
 
 ### Dashboard
-![Dashboard](dashboard.png)
+![Dashboard](docs/screenshots/dashboard.png)
 
 ### Products
-![Products](products.png)
+![Products](docs/screenshots/products.png)
 
 ### Receipts
-![Receipts](recipts.png)
+![Receipts](docs/screenshots/recipts.png)
 
 ### Delivery Orders
-![Delivery Orders](delivery%20orders.png)
+![Delivery Orders](docs/screenshots/delivery%20orders.png)
 
 ### Warehouses
-![Warehouses](warehouses.png)
+![Warehouses](docs/screenshots/warehouses.png)
 
 ---
 
