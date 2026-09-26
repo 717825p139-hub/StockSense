@@ -1,11 +1,18 @@
 # 📦 StockSense
 
 ![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white&labelColor=20232a)
+![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-06B6D4?logo=tailwindcss&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-18-339933?logo=node.js&logoColor=white)
 ![Express](https://img.shields.io/badge/Express-4-000000?logo=express&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-3ECF8E?logo=supabase&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?logo=vercel&logoColor=white)
 ![Status](https://img.shields.io/badge/status-active-success)
+![Made for](https://img.shields.io/badge/Made%20for-Odoo%20×%20GCET%20Hackathon%202026-orange)
+
+![Last Commit](https://img.shields.io/github/last-commit/717825p139-hub/StockSense)
+![Repo Size](https://img.shields.io/github/repo-size/717825p139-hub/StockSense)
+![Top Language](https://img.shields.io/github/languages/top/717825p139-hub/StockSense)
 
 **Centralized Inventory Management System** — real-time tracking of products, warehouses, receipts, deliveries, transfers, and stock adjustments.
 
@@ -21,7 +28,8 @@
 3. [Tech Stack](#tech-stack)
 4. [Project Structure](#project-structure)
 5. [Getting Started](#getting-started)
-6. [Team](#team)
+6. [Demo Login Credentials](#-demo-login-credentials)
+7. [Team](#team)
 
 ---
 
@@ -143,6 +151,90 @@ npm run dev
 ```
 
 The frontend runs on Vite's default dev port; the backend serves the REST API consumed by the client.
+
+---
+
+## 🔐 Demo Login Credentials
+
+StockSense provides role-based access for three types of users. The following accounts are available for the hackathon demonstration.
+
+| Role | Email | Password |
+|------|-------|----------|
+| 👑 **Admin** | `admin@stocksense.demo` | `Admin@12345` |
+| 📦 **Inventory Manager** | `manager@stocksense.demo` | `Manager@12345` |
+| 🏭 **Warehouse Staff** | `staff@stocksense.demo` | `Staff@12345` |
+
+### 👑 Admin
+
+**Email:** `admin@stocksense.demo`
+**Password:** `Admin@12345`
+
+Provides full system access, including:
+
+- Dashboard
+- Products
+- Stock
+- Categories
+- Reordering Rules
+- Receipts
+- Delivery Orders
+- Internal Transfers
+- Inventory Adjustments
+- Move History
+- Warehouses & Locations
+- Reports
+- AI Copilot
+- User Management
+- Audit Logs
+- Security Monitor
+- Settings
+- Profile
+
+### 📦 Inventory Manager
+
+**Email:** `manager@stocksense.demo`
+**Password:** `Manager@12345`
+
+Provides inventory management access, including:
+
+- Dashboard
+- Products
+- Stock
+- Categories
+- Reordering Rules
+- Receipts
+- Delivery Orders
+- Internal Transfers
+- Inventory Adjustments
+- Move History
+- Warehouses & Locations
+- Reports
+- AI Copilot
+- Settings
+- Profile
+
+Admin-only functions are protected by role-based authorization.
+
+### 🏭 Warehouse Staff
+
+**Email:** `staff@stocksense.demo`
+**Password:** `Staff@12345`
+
+Provides warehouse-focused operational access, including:
+
+- Dashboard
+- Stock
+- Receipts
+- Delivery Orders
+- Internal Transfers
+- Move History
+- Reports
+- AI Copilot
+- Profile
+
+Administrative functions and restricted APIs are protected from Warehouse Staff users.
+
+> **Demo accounts:** These credentials are intended only for the hackathon demonstration environment. Do not use them for a production deployment.
 
 ---
 
