@@ -75,15 +75,20 @@ Products → Warehouses → Locations → Inventory Operations → Stock → Mov
 
 ## Screenshots
 
-| Dashboard | Receipts |
-|---|---|
-| ![Dashboard](docs/screenshots/dashboard.png) | ![Receipts](docs/screenshots/receipts.png) |
+### Dashboard
+![Dashboard](dashboard.png)
 
-| Delivery Orders | Move History |
-|---|---|
-| ![Delivery Orders](docs/screenshots/deliveries.png) | ![Move History](docs/screenshots/move-history.png) |
+### Products
+![Products](products.png)
 
-> Add screenshots to `docs/screenshots/` with the filenames above to display them here.
+### Receipts
+![Receipts](recipts.png)
+
+### Delivery Orders
+![Delivery Orders](delivery%20orders.png)
+
+### Warehouses
+![Warehouses](warehouses.png)
 
 ---
 
@@ -104,24 +109,13 @@ Products → Warehouses → Locations → Inventory Operations → Stock → Mov
 | Data Export | CSV reports |
 
 **Architecture:**
-
-```mermaid
-graph LR
-    A[React Frontend<br/>Vite + Tailwind] -->|REST API| B[Express Backend<br/>Node.js]
-    B -->|Auth| C[Supabase Auth]
-    B -->|Queries| D[(Supabase<br/>PostgreSQL)]
-    B -->|Hosted on| E[Vercel]
-    A -->|Hosted on| E
+```
+React Frontend → Express API → Supabase (PostgreSQL)
 ```
 
 ---
 
 ## Project Structure
-
-![Frontend](https://img.shields.io/badge/📁-frontend-61DAFB?style=flat-square&labelColor=1e1e1e)
-![Backend](https://img.shields.io/badge/📁-backend-339933?style=flat-square&labelColor=1e1e1e)
-![API](https://img.shields.io/badge/📁-api-000000?style=flat-square&labelColor=1e1e1e)
-![Supabase](https://img.shields.io/badge/📁-supabase-3ECF8E?style=flat-square&labelColor=1e1e1e)
 
 ```
 StockSense/
@@ -147,10 +141,6 @@ StockSense/
 ---
 
 ## Getting Started
-
-![Node](https://img.shields.io/badge/Node.js-%3E%3D18-339933?logo=node.js&logoColor=white)
-![npm](https://img.shields.io/badge/npm-%3E%3D9-CB3837?logo=npm&logoColor=white)
-![Supabase Required](https://img.shields.io/badge/Requires-Supabase%20Project-3ECF8E?logo=supabase&logoColor=white)
 
 ### Prerequisites
 - Node.js (v18+)
@@ -274,6 +264,6 @@ Administrative functions and restricted APIs are protected from Warehouse Staff 
 
 | Name | Roll No. | Role |
 |---|---|---|
-| Pranav R K | 71725P139 | ![Team Lead](https://img.shields.io/badge/Team%20Lead-Full--stack-f0a500) |
-| Cibi K | 71725F112 | ![Frontend](https://img.shields.io/badge/Role-Frontend-61DAFB?logo=react&logoColor=white) |
-| Sriram G S | 71725F152 | ![Backend](https://img.shields.io/badge/Role-Backend-339933?logo=node.js&logoColor=white) |
+| Pranav R K | 71725P139 | Team Leader, Full-stack |
+| Cibi K | 71725F112 | Frontend |
+| Sriram G S | 71725F152 | Backend |
