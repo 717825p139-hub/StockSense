@@ -1,9 +1,8 @@
 const { query } = require('../config/db');
 
 async function initDb() {
-  console.log('Initializing PostgreSQL database tables...');
+  console.log('Initializing PostgreSQL database schema...');
   try {
-    // Drop existing tables if needed or create if not exists
     const schema = `
       CREATE TABLE IF NOT EXISTS users (
         id SERIAL PRIMARY KEY,
@@ -180,10 +179,41 @@ async function initDb() {
         responsible_id INT REFERENCES users(id) ON DELETE SET NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
       );
+
+      CREATE TABLE IF NOT EXISTS reorder_rules (
+        id SERIAL PRIMARY KEY,
+        product_id INT REFERENCES products(id) ON DELETE CASCADE,
+        warehouse_id INT REFERENCES warehouses(id) ON DELETE CASCADE,
+        minimum_quantity INT NOT NULL DEFAULT 10,
+        maximum_quantity INT NOT NULL DEFAULT 100,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        CONSTRAINT unique_product_warehouse UNIQUE (product_id, warehouse_id)
+      );
+
+      CREATE TABLE IF NOT EXISTS notifications (
+        id SERIAL PRIMARY KEY,
+        user_id INT REFERENCES users(id) ON DELETE CASCADE,
+        title VARCHAR(255) NOT NULL,
+        message TEXT NOT NULL,
+        type VARCHAR(50) DEFAULT 'info',
+        read BOOLEAN DEFAULT FALSE,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      );
+
+      CREATE TABLE IF NOT EXISTS audit_logs (
+        id SERIAL PRIMARY KEY,
+        user_id INT REFERENCES users(id) ON DELETE SET NULL,
+        action VARCHAR(100) NOT NULL,
+        entity_type VARCHAR(100) NOT NULL,
+        entity_id VARCHAR(100),
+        before_data JSONB,
+        after_data JSONB,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      );
     `;
 
     await query(schema);
-    console.log('Database schema created successfully.');
+    console.log('Database schema initialization completed.');
   } catch (err) {
     console.error('Error initializing database:', err);
     process.exit(1);

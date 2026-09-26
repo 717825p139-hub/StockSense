@@ -1,0 +1,21 @@
+{
+  "name": "stocksense",
+  "version": "2.0.0",
+  "private": true,
+  "description": "StockSense — Inventory Intelligence Platform",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "node backend/server.js",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "seed": "node backend/scripts/seed.js",
+    "test:demo": "node backend/scripts/testDemoFlow.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "pg": "^8.11.5"
+  }
+}

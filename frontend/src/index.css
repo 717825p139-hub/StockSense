@@ -4,11 +4,27 @@
 
 @layer base {
   body {
-    @apply bg-slate-950 text-slate-100 min-h-screen font-sans;
+    @apply bg-slate-50 text-slate-900 min-h-screen font-sans;
   }
 }
 
-/* Print styles for Receipts and Deliveries */
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Print styles for Receipts, Delivery Slips, and Reports */
 @media print {
   body {
     background: white !important;
@@ -18,7 +34,9 @@
     display: none !important;
   }
   .print-area {
-    padding: 20px;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
     background: white !important;
     color: black !important;
   }

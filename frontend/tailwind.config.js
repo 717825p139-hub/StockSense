@@ -8,16 +8,16 @@ export default {
     extend: {
       colors: {
         brand: {
-          50: '#fff1f2',
-          100: '#ffe4e6',
-          200: '#fecdd3',
-          500: '#e11d48',
-          600: '#e11d48',
-          700: '#be123c',
-          accent: '#ff4d6d',
-          dark: '#0f172a',
-          card: '#1e293b',
-          border: '#334155'
+          50: '#f0fdf4',
+          100: '#dcfce7',
+          500: '#16a34a',
+          600: '#15803d',
+          700: '#166534',
+          accent: '#059669',
+          bg: '#f8fafc',
+          card: '#ffffff',
+          border: '#e2e8f0',
+          text: '#0f172a'
         }
       }
     },
