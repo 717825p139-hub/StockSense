@@ -31,8 +31,8 @@ Karpagam College of Engineering
 | Name | Roll No. | Role |
 |---|---|---|
 | Pranav R K | 71725P139 | Team Leader, Full-stack |
-| Cibi K | 71725F112 | Frontend |
-| Sriram G S | 71725F152 | Backend |
+| Cibi K | 71725F112 | Backend |
+| Sriram G S | 71725F152 | Frontend |
 
 ---
 
