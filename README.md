@@ -45,7 +45,7 @@
 
 ## Overview
 
-StockSense replaces manual registers, spreadsheets, and scattered stock tracking with a single centralized platform. It gives **Inventory Managers** and **Warehouse Staff** real-time visibility into every product, every location, and every stock movement — from vendor receipt to final delivery.
+StockSense replaces  manual registers, spreadsheets, and scattered stock tracking with a single centralized platform. It gives **Inventory Managers** and **Warehouse Staff** real-time visibility into every product, every location, and every stock movement — from vendor receipt to final delivery.
 
 **Core data flow:**
 
