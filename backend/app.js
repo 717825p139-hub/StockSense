@@ -20,8 +20,15 @@ const reportsRoutes = require('./routes/reports');
 const notificationsRoutes = require('./routes/notifications');
 const auditLogsRoutes = require('./routes/auditLogs');
 const aiRoutes = require('./routes/ai');
+const securityRoutes = require('./routes/security');
+const { helmetMiddleware, globalApiLimiter, authLimiter } = require('./middleware/security');
 
 const app = express();
+
+app.use(helmetMiddleware);
+app.use('/api', globalApiLimiter);
+app.use('/api/auth/login', authLimiter);
+app.use('/api/auth/reset-password', authLimiter);
 
 app.use(cors({
   origin: true,
@@ -58,6 +65,7 @@ app.use('/api/reports', reportsRoutes);
 app.use('/api/notifications', notificationsRoutes);
 app.use('/api/audit-logs', auditLogsRoutes);
 app.use('/api/ai', aiRoutes);
+app.use('/api/security', securityRoutes);
 
 // Global Error Handler
 app.use((err, req, res, next) => {
