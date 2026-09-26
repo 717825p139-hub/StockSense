@@ -8,6 +8,10 @@ It replaces manual registers, spreadsheets, and scattered stock tracking with a 
 
 The system is designed for **Inventory Managers and Warehouse Staff**, providing real-time visibility into inventory operations through a simple and professional interface.
 
+> ⚠️ **Work in progress:** This README is a rough draft, not final. Project
+> structure, folder layout, and file organization are still evolving and
+> subject to change as development continues.
+
 ---
 
 ## 🏆 Hackathon
@@ -26,9 +30,9 @@ Karpagam College of Engineering
 
 | Name | Roll No. | Role |
 |---|---|---|
-| Pranav R K | 71725P139 | Team Leader |
-| Cibi K | 71725F112 | Member |
-| Sriram G S | 71725F152 | Member |
+| Pranav R K | 71725P139 | Team Leader, Full-stack |
+| Cibi K | 71725F112 | Frontend |
+| Sriram G S | 71725F152 | Backend |
 
 ---
 
