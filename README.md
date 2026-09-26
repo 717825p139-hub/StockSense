@@ -1,100 +1,70 @@
-# StockSense 📦
+# 📦 StockSense
 
-## Smart Inventory Management System
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white&labelColor=20232a)
+![Node.js](https://img.shields.io/badge/Node.js-18-339933?logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express-4-000000?logo=express&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-3ECF8E?logo=supabase&logoColor=white)
+![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?logo=vercel&logoColor=white)
+![Status](https://img.shields.io/badge/status-active-success)
 
-StockSense is a centralized Inventory Management System designed to simplify and digitize warehouse and stock operations.
-
-It replaces manual registers, spreadsheets, and scattered stock tracking with a structured platform for managing **products, warehouses, locations, receipts, deliveries, internal transfers, inventory adjustments, and stock movement history**.
-
-The system is designed for **Inventory Managers and Warehouse Staff**, providing real-time visibility into inventory operations through a simple and professional interface.
+**Centralized Inventory Management System** — real-time tracking of products, warehouses, receipts, deliveries, transfers, and stock adjustments.
 
 🔗 **Live App:** [stocksense-odoo.vercel.app](https://stocksense-odoo.vercel.app)
-
-> ⚠️ **Work in progress:** This README is a rough draft, not final. Project
-> structure, folder layout, and file organization are still evolving and
-> subject to change as development continues.
+🏆 **Built for:** Odoo × GCET Hyderabad Hackathon 2026
 
 ---
 
-## 🏆 Hackathon
+## Table of Contents
 
-**Odoo × GCET Hyderabad Hackathon 2026**
-
-### Team
-
-**CodeForIndia**
-
-### College
-
-Karpagam College of Engineering
-
-### Team Members
-
-| Name | Roll No. | Role |
-|---|---|---|
-| Pranav R K | 71725P139 | Team Leader, Full-stack |
-| Cibi K | 71725F112 | Backend |
-| Sriram G S | 71725F152 | Frontend |
+1. [Overview](#overview)
+2. [Features](#features)
+3. [Tech Stack](#tech-stack)
+4. [Project Structure](#project-structure)
+5. [Getting Started](#getting-started)
+6. [Team](#team)
 
 ---
 
-# 🎯 Problem
+## Overview
 
-Traditional inventory management often depends on:
+StockSense replaces manual registers, spreadsheets, and scattered stock tracking with a single centralized platform. It gives **Inventory Managers** and **Warehouse Staff** real-time visibility into every product, every location, and every stock movement — from vendor receipt to final delivery.
 
-- Manual registers
-- Excel spreadsheets
-- Separate warehouse records
-- Manual stock calculations
-- Difficult tracking of stock movements
-- Delayed identification of low-stock items
+**Core data flow:**
 
-These approaches can lead to inaccurate stock information, difficulty tracing inventory movements, and inefficient warehouse operations.
-
----
-
-# 💡 Solution
-
-StockSense provides a centralized system where inventory operations can be managed from a single platform.
-
-The system connects:
-
-```text
-Products
-    ↓
-Warehouses
-    ↓
-Locations
-    ↓
-Inventory Operations
-    ↓
-Stock
-    ↓
-Movement History
+```
+Products → Warehouses → Locations → Inventory Operations → Stock → Movement History
 ```
 
 ---
 
-# ⚙️ Features
+## Features
 
-- **Authentication** – signup, login, forgot/reset password
-- **Dashboard** – real-time KPIs and operations snapshot
-- **Product Management** – products, categories, reordering rules
-- **Warehouses & Locations** – multi-warehouse, multi-location stock
-- **Receipts** – record incoming stock from vendors
-- **Delivery Orders** – pick, pack, and ship outgoing stock
-- **Internal Transfers** – move stock between locations
-- **Stock Adjustments** – reconcile system stock with physical counts
-- **Move History** – full ledger of every stock movement
-- **Reports** – inventory summaries and insights
-- **Audit Logs & Security Monitoring** – track user/system activity
-- **Notifications** – low-stock and operational alerts
-- **Global Search** – quickly find products, orders, and records
-- **AI Copilot** – AI assistant for inventory queries and help
+### Core Operations
+- **Receipts** — record incoming stock from vendors
+- **Delivery Orders** — pick, pack, and ship outgoing stock
+- **Internal Transfers** — move stock between racks, floors, or warehouses
+- **Stock Adjustments** — reconcile system stock with physical counts
+- **Move History** — complete, timestamped ledger of every stock event
+
+### Catalog & Setup
+- **Products** — create/update products, categories, units of measure
+- **Reordering Rules** — automated low-stock reorder thresholds
+- **Warehouses & Locations** — multi-warehouse, multi-location tracking
+
+### Visibility & Insights
+- **Dashboard** — real-time KPIs and operations overview
+- **Reports** — inventory summaries and analytics
+- **Audit Logs** — user and system activity tracking
+- **Notifications** — low-stock and operational alerts
+- **Global Search** — quickly find products, orders, and records
+
+### Platform
+- **Authentication** — signup, login, forgot/reset password
+- **AI Copilot** — AI assistant for inventory queries
 
 ---
 
-# 🛠️ Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -107,20 +77,82 @@ Movement History
 | API | REST APIs |
 | Deployment | Vercel |
 | Version Control | Git + GitHub |
-| Security | Helmet, Rate Limiting, Authentication & Role-Based Authorization |
-| AI Feature | AI Copilot |
-| Data Export | CSV Reports |
-| Architecture | React Frontend → Express API → Supabase PostgreSQL |
+| Security | Helmet, rate limiting, role-based authorization |
+| Data Export | CSV reports |
+
+**Architecture:**
+```
+React Frontend → Express API → Supabase (PostgreSQL)
+```
 
 ---
 
-# 📁 Project Structure
+## Project Structure
 
-```text
+```
 StockSense/
-├── frontend/     → React + Vite client (pages, components, context)
-├── backend/      → Express server (routes, services, middleware)
-└── supabase/     → Database migrations
+├── frontend/              React + Vite client
+│   └── src/
+│       ├── pages/         Route-level views (Dashboard, Receipts, Deliveries, ...)
+│       ├── components/    Shared UI (Navbar, Sidebar, Modals)
+│       ├── context/       App-wide state
+│       └── services/      API clients
+│
+├── backend/               Express server
+│   ├── routes/            REST endpoints per module
+│   ├── middleware/        Auth & security
+│   ├── services/          Business logic (stock, security monitoring)
+│   ├── config/            DB & Supabase config
+│   └── scripts/           DB init, seed, verification
+│
+├── api/                   Vercel serverless entry point
+├── supabase/               Database migrations
+└── vercel.json             Deployment config
 ```
 
-> Note: layout above reflects the current codebase but is still evolving.
+---
+
+## Getting Started
+
+### Prerequisites
+- Node.js (v18+)
+- A [Supabase](https://supabase.com) project (Postgres + Auth)
+
+### 1. Clone the repo
+```bash
+git clone https://github.com/<your-org>/StockSense.git
+cd StockSense
+```
+
+### 2. Backend setup
+```bash
+cd backend
+npm install
+cp .env.example .env   # add your Supabase credentials
+npm run init-db        # initialize database schema
+npm run seed           # optional: seed sample data
+npm run dev
+```
+
+### 3. Frontend setup
+```bash
+cd frontend
+npm install
+cp .env.example .env   # add your API/Supabase config
+npm run dev
+```
+
+The frontend runs on Vite's default dev port; the backend serves the REST API consumed by the client.
+
+---
+
+## Team
+
+**CodeForIndia** · Karpagam College of Engineering
+
+| Name | Roll No. | Role |
+|---|---|---|
+| Pranav R K | 71725P139 | Team Leader, Full-stack |
+| Cibi K | 71725F112 | Frontend |
+| Sriram G S | 71725F152 | Backend |
+
