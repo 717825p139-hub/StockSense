@@ -19,7 +19,7 @@
 🔗 **Live App:** [stocksense-odoo.vercel.app](https://stocksense-odoo.vercel.app)
 🏆 **Built for:** Odoo × GCET Hyderabad Hackathon 2026
 
-### 🔗 Quick Links
+###  🔗 Quick Links
 
 | Resource | Link |
 |---|---|
