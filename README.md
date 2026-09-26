@@ -70,3 +70,57 @@ Stock
     ↓
 Movement History
 ```
+
+---
+
+# ⚙️ Features
+
+- **Authentication** – signup, login, forgot/reset password
+- **Dashboard** – real-time KPIs and operations snapshot
+- **Product Management** – products, categories, reordering rules
+- **Warehouses & Locations** – multi-warehouse, multi-location stock
+- **Receipts** – record incoming stock from vendors
+- **Delivery Orders** – pick, pack, and ship outgoing stock
+- **Internal Transfers** – move stock between locations
+- **Stock Adjustments** – reconcile system stock with physical counts
+- **Move History** – full ledger of every stock movement
+- **Reports** – inventory summaries and insights
+- **Audit Logs & Security Monitoring** – track user/system activity
+- **Notifications** – low-stock and operational alerts
+- **Global Search** – quickly find products, orders, and records
+- **AI Copilot** – AI assistant for inventory queries and help
+
+---
+
+# 🛠️ Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Frontend | React (Vite), Tailwind CSS |
+| Backend | Node.js, Express |
+| Database | PostgreSQL (via Supabase) |
+| Auth | JWT-based authentication |
+| Deployment | Vercel (frontend + serverless API) |
+
+---
+
+# 📁 Project Structure
+
+```text
+StockSense/
+├── frontend/     → React + Vite client (pages, components, context)
+├── backend/      → Express server (routes, services, middleware)
+├── api/          → Vercel serverless entry point
+├── supabase/     → Database migrations
+└── vercel.json   → Vercel deployment config
+```
+
+> Note: layout above reflects the current codebase but is still evolving.
+
+---
+
+# 🚀 Deployment
+
+StockSense is deployed on **Vercel** — the frontend as a static build and
+the backend exposed via Vercel serverless functions (`api/index.js`),
+with PostgreSQL hosted on **Supabase**.
