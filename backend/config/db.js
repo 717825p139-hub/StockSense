@@ -7,16 +7,18 @@ require('dotenv').config();
 const isProduction = process.env.NODE_ENV === 'production';
 const connectionString = process.env.DATABASE_URL || 'postgresql://postgres:postgres@localhost:5432/stocksense';
 
+const isRemotePostgres = connectionString.includes('supabase.co') || connectionString.includes('pooler.supabase.com') || isProduction;
+
 let pool;
 let usePg = true;
 
 try {
   pool = new Pool({
     connectionString,
-    ssl: isProduction ? { rejectUnauthorized: false } : false,
+    ssl: isRemotePostgres ? { rejectUnauthorized: false } : false,
     max: 20,
     idleTimeoutMillis: 30000,
-    connectionTimeoutMillis: 5000,
+    connectionTimeoutMillis: 10000,
   });
 } catch (err) {
   console.warn('PostgreSQL Pool initialization warning:', err.message);
