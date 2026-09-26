@@ -18,11 +18,17 @@ The system is designed for **Inventory Managers and Warehouse Staff**, providing
 
 **CodeForIndia**
 
+### College
+
+Karpagam College of Engineering
+
 ### Team Members
 
-- Cibi K
-- Pranav R K
-- Sriram G S
+| Name | Roll No. | Role |
+|---|---|---|
+| Pranav R K | 71725P139 | Team Leader |
+| Cibi K | 71725F112 | Member |
+| Sriram G S | 71725F152 | Member |
 
 ---
 
@@ -59,4 +65,4 @@ Inventory Operations
 Stock
     ↓
 Movement History
-
+```
