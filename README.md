@@ -8,6 +8,8 @@ It replaces manual registers, spreadsheets, and scattered stock tracking with a 
 
 The system is designed for **Inventory Managers and Warehouse Staff**, providing real-time visibility into inventory operations through a simple and professional interface.
 
+🔗 **Live App:** [stocksense-odoo.vercel.app](https://stocksense-odoo.vercel.app)
+
 > ⚠️ **Work in progress:** This README is a rough draft, not final. Project
 > structure, folder layout, and file organization are still evolving and
 > subject to change as development continues.
@@ -31,8 +33,8 @@ Karpagam College of Engineering
 | Name | Roll No. | Role |
 |---|---|---|
 | Pranav R K | 71725P139 | Team Leader, Full-stack |
-| Cibi K | 71725F112 | Backend |
-| Sriram G S | 71725F152 | Frontend |
+| Cibi K | 71725F112 | Frontend |
+| Sriram G S | 71725F152 | Backend |
 
 ---
 
@@ -96,11 +98,19 @@ Movement History
 
 | Layer | Technology |
 |---|---|
-| Frontend | React (Vite), Tailwind CSS |
-| Backend | Node.js, Express |
-| Database | PostgreSQL (via Supabase) |
-| Auth | JWT-based authentication |
-| Deployment | Vercel (frontend + serverless API) |
+| Frontend | React.js + Vite |
+| UI / Styling | Tailwind CSS |
+| Backend | Node.js + Express.js |
+| Database | PostgreSQL |
+| Backend Database Platform | Supabase |
+| Authentication | Supabase Auth |
+| API | REST APIs |
+| Deployment | Vercel |
+| Version Control | Git + GitHub |
+| Security | Helmet, Rate Limiting, Authentication & Role-Based Authorization |
+| AI Feature | AI Copilot |
+| Data Export | CSV Reports |
+| Architecture | React Frontend → Express API → Supabase PostgreSQL |
 
 ---
 
@@ -110,17 +120,7 @@ Movement History
 StockSense/
 ├── frontend/     → React + Vite client (pages, components, context)
 ├── backend/      → Express server (routes, services, middleware)
-├── api/          → Vercel serverless entry point
-├── supabase/     → Database migrations
-└── vercel.json   → Vercel deployment config
+└── supabase/     → Database migrations
 ```
 
 > Note: layout above reflects the current codebase but is still evolving.
-
----
-
-# 🚀 Deployment
-
-StockSense is deployed on **Vercel** — the frontend as a static build and
-the backend exposed via Vercel serverless functions (`api/index.js`),
-with PostgreSQL hosted on **Supabase**.
